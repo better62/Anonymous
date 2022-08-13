@@ -1,0 +1,78 @@
+extends base
+
+block content
+    div.overlay
+    div#call(data-id= {roomname, username, camera, voice})
+        div.alarm
+        div.logo
+            div.logo__content
+                div.logo__title
+                    span Anonymous
+                    i.fas.fa-circle
+                div.logo__roomname
+                    span Room Name 
+                    span #{roomname}
+            div.logo__button
+                div.logo__chat
+                    span Close the chat box
+            div.logo__button-active 
+                span Message
+                div.logo__dot
+        div#myStream
+            
+            video#myFace( width="auto" height="100%" autoplay, playsinline)
+            div#fullScreen
+                span Video call
+                i.fas.fa-expand
+            div#peerScreen
+                div
+                    video#peerFace(width="200" height = "auto" autoplay,playsinline)
+                    i.fas.fa-exchange-alt
+            div.call__button
+                div#mute
+                    i.fas.fa-microphone
+                div#camera 
+                    i.fas.fa-video
+                div#phone 
+                    i.fas.fa-phone
+                div.call__setting
+                    //- div.call__setting-box-overlay
+                    div.call__setting-box
+                        div
+                            i.fas.fa-camera
+                            span camera change
+                            select#cameras
+                        div
+                            i.fas.fa-microphone-alt
+                            span audio change
+                            select#audios
+                    i.call__setting-icon.fas.fa-wrench
+                    
+        div.message
+            div
+                div.message__bar 
+                    div.message__bar-chat Chat
+                        div.message__dot
+                    span.message__bar-self Self Chat
+                div.message__fakeDiv
+                ul.message__chat-list 
+                ul.message__self-list
+            form.message__Form
+                div.message__file
+                    div.message__extra
+                        div.emoji-button
+                            i.far.fa-meh-blank
+                            
+                            emoji-picker
+                        label(for="image")
+                            input.image__input(type="file", accept="image/*", id="image")
+                            i.fas.fa-image
+                            
+                        
+                            
+                    textarea.message__Input(placeholder="Write a message" rows="1")
+                i.message__button-icon.fas.fa-paper-plane
+            
+            
+block scripts
+    script(src="/public/js/room.js") 

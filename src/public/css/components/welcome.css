@@ -1,0 +1,132 @@
+#welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.welcome__title  {
+    display: flex;
+    align-items: end;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #6926ac;
+}
+
+.welcome__title i{
+    margin-left: 5px;
+    font-size: 20px;
+    color: #6926ac;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    all: unset;
+}
+
+button{
+    all:unset;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+button:focus{
+    color: rgb(255, 255, 255);
+    box-shadow: inset 6px 6px 10px 0 rgba(255, 255, 255, 0.2),
+      inset -6px -6px 10px 0 rgba(255, 255, 255, 0.2);
+}
+
+.neumorphic {
+    box-shadow: inset 6px 6px 10px 0 rgba(195, 35, 248, 0.2),
+        inset -6px -6px 10px 0 rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    color: #999999;
+    width: 250px;
+    height: 25px;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 1.3rem;
+    display: flex;
+    margin-bottom: 10px;
+    
+    
+    
+  }
+.neumorphic--pressed {
+    box-shadow: inset 6px 6px 10px 0 rgba(195, 35, 248, 0.2),
+      inset -6px -6px 10px 0 rgba(255, 255, 255, 0.2);
+  }
+
+.setting{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.setting__name{
+    color: #999999;
+    font-size: 18px;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.switch span {
+    color:#999999;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+  
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+  }
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+  
+  
